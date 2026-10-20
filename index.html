@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>28°C Hand Beaten Coffee · Palam Vihar, Gurugram</title>
+<meta name="description" content="Hand-beaten cold coffee, mocktails, mojitos and shakes in Palam Vihar, Gurugram. Browse the menu and order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#home" aria-label="28°C Hand Beaten Coffee">28°C <span>Hand Beaten Coffee</span></a>
+  <nav id="nav" aria-label="Main">
+    <a href="#menu">Menu</a><a href="#how">How we make it</a><a href="#visit">Visit</a>
+  </nav>
+  <button class="cartbtn" id="openCart" aria-label="Open your order">Your order <b id="count">0</b></button>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Cold coffee, beaten by hand until it’s thick and frothy.</h1>
+      <p>Hand-beaten coffees, mocktails, mojitos and shakes in Palam Vihar. Pick your drinks and send the order on WhatsApp.</p>
+      <div class="cta">
+        <a class="btn primary" href="#menu">See menu &amp; prices</a>
+        <a class="btn ghost" href="#visit">Find the shop</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 320 420" role="img">
+        <rect x="150" y="10" width="14" height="150" rx="7" fill="#D8372B"/>
+        <path d="M70 90h180l-20 300a22 22 0 0 1-22 20H112a22 22 0 0 1-22-20z" fill="#F6EFE4" stroke="#2B1A12" stroke-width="6"/>
+        <path d="M80 160h160l-14 228a14 14 0 0 1-14 12H108a14 14 0 0 1-14-12z" fill="#7A4A2B"/>
+        <path d="M80 160h160l-4 60H84z" fill="#C8863A"/>
+        <path d="M70 90h180v34c-20 14-30-8-50 6s-30-8-50 6-30-8-50 6z" fill="#fff" stroke="#2B1A12" stroke-width="6" stroke-linejoin="round"/>
+        <circle cx="130" cy="300" r="14" fill="#9B6238"/><circle cx="190" cy="340" r="11" fill="#9B6238"/><circle cx="165" cy="270" r="9" fill="#9B6238"/>
+      </svg>
+      <div class="temp">28°C</div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <h2>Menu</h2>
+      <p class="sub">Prices in ₹. M = medium, L = large. Tap a price to add it to your order.</p>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <p class="note" id="note"></p>
+      <ul class="items" id="items"></ul>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <h2>How a hand-beaten coffee is made</h2>
+      <ol>
+        <li><h3>Coffee and sugar go in the cup</h3><p>A small amount of coffee, sugar and a splash of water.</p></li>
+        <li><h3>We beat it by hand</h3><p>No machine. The mix is whisked until it turns pale, thick and creamy.</p></li>
+        <li><h3>Cold milk and ice</h3><p>Poured over the foam so every sip stays cold and smooth.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap grid2">
+      <div>
+        <h2>Visit us</h2>
+        <p>28°C Hand Beaten Coffee Shop<br>Palam Vihar, Gurugram, Haryana</p>
+        <p>Open daily · 11:00 AM – 11:00 PM <small>(sample hours, update before launch)</small></p>
+        <div class="cta">
+          <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=28%C2%B0C+Hand+Beaten+Coffee+Shop+Palam+Vihar+Gurugram">Open in Google Maps</a>
+          <a class="btn ghost" id="waDirect" target="_blank" rel="noopener" href="#">Chat on WhatsApp</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Map of 28°C Hand Beaten Coffee Shop" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=28%C2%B0C+Hand+Beaten+Coffee+Shop+Palam+Vihar+Gurugram&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="yr"></span> 28°C Hand Beaten Coffee · Palam Vihar, Gurugram</p>
+  <p><small>Demo website. Menu and prices are based on the shop’s printed menu.</small></p>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Your order" aria-hidden="true">
+  <div class="dhead"><h2>Your order</h2><button id="closeCart" aria-label="Close order">✕</button></div>
+  <ul id="cartList"></ul>
+  <p class="empty" id="empty">Nothing here yet. Add drinks from the menu.</p>
+  <div class="dfoot">
+    <div class="total"><span>Total</span><b id="total">₹0</b></div>
+    <input id="custName" type="text" placeholder="Your name" autocomplete="name">
+    <button class="btn primary full" id="sendWA">Send order on WhatsApp</button>
+    <button class="link" id="clear">Clear order</button>
+  </div>
+</aside>
+<script src="js/script.js"></script>
+</body>
+</html>
